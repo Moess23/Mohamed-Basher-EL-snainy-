@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد بشير إدريس حسين</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f4f4f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        .main-header {
+            text-align: center;
+            background: #6200ea;
+            color: white;
+            padding: 20px 10px;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 10px 0;
+            background: #333;
+        }
+
+        .main-nav ul li {
+            margin: 0 15px;
+        }
+
+        .main-nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .main-nav ul li a:hover {
+            background-color: #ffcc00;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .content-section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            background: #6200ea;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div>
+            <h1>محمد بشير إدريس حسين</h1>
+            <p>مرحبًا بكم في موقعي الشخصي</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about" class="nav-link">عنّي</a></li>
+            <li><a href="#specialization" class="nav-link">التخصص</a></li>
+            <li><a href="#courses" class="nav-link">المواد الدراسية</a></li>
+            <li><a href="#contact" class="nav-link">اتصل بي</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- قسم عنّي -->
+        <section id="about" class="content-section">
+            <div>
+                <h2>عنّي</h2>
+                <p><strong>الاسم:</strong> محمد بشير إدريس حسين</p>
+                <p><strong>الرقم الدراسي:</strong> 143232141</p>
+                <p>أنا مهندس برمجيات، وبدأت رحلتي البرمجية منذ سنوات عديدة، حيث قمت بإنشاء العديد من التطبيقات التجريبية والتعلمية. أحد هذه التطبيقات كان نظام دفع آلي للمتاجر الإلكترونية باستخدام لغة بايثون. للأسف، لم يكتمل المشروع لأنني لا أملك حقوق استخدام هذه الأنظمة، ولكنه كان تجربة تعليمية رائعة.</p>
+            </div>
+        </section>
+
+        <!-- قسم التخصص -->
+        <section id="specialization" class="content-section">
+            <div>
+                <h2>لماذا اخترت هندسة البرمجيات؟</h2>
+                <p>اخترت هذا التخصص لأنني شغوف بالتكنولوجيا والإبداع. البرمجة ليست مجرد كتابة أكواد بالنسبة لي؛ إنها أداة لحل المشكلات بطرق مبتكرة، ووسيلة لتحسين العالم من خلال التقنيات المتطورة. أحب تحدي نفسي باستمرار وتعلم تقنيات جديدة.</p>
+            </div>
+        </section>
+
+        <!-- قسم المواد الدراسية -->
+        <section id="courses" class="content-section">
+            <div>
+                <h2>المواد الدراسية</h2>
+                <ul>
+                    <li>OS (نظم التشغيل)</li>
+                    <li>SE (هندسة البرمجيات)</li>
+                    <li>OOP (البرمجة كائنية التوجه)</li>
+                    <li>Database (قواعد البيانات)</li>
+                    <li>Internet Pro (مقدمة الإنترنت)</li>
+                    <li>English (اللغة الإنجليزية)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- قسم الاتصال -->
+        <section id="contact" class="content-section">
+            <div>
+                <h2>اتصل بي</h2>
+                <p><strong>رقم الهاتف:</strong> 0922585329</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>جميع الحقوق محفوظة 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // تطبيق تأثيرات الترانزيسيون عند التمرير
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.content-section');
+
+            // إضافة الترانزيسيون عند التمرير
+            window.addEventListener('scroll', () => {
+                sections.forEach(section => {
+                    const sectionPosition = section.getBoundingClientRect().top;
+                    if (sectionPosition < window.innerHeight - 50) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
